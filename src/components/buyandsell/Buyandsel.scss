@@ -1,0 +1,50 @@
+.Buyandsell {
+  margin-bottom: 20px;
+  
+  .container {
+    display: flex;
+    gap: 2%;
+  }
+
+  .img {
+    img {
+      width: 100%;
+      height: 300px;
+      padding-inline: 124px;
+    }
+  }
+
+  .left-part1 {
+    flex: 2;
+    // margin-top: 20px;
+    max-width: 49%;
+
+    .likes{
+      visibility: hidden;
+    }
+
+    .time-ago{
+      margin-bottom: -20px;
+    }
+
+    img {
+      width: 83%;
+    }
+  }
+
+  .right-part {
+    flex: 1;
+    max-width: 49%;
+
+    .sticky {
+      position: sticky;
+      top: 60px;
+      // display: flex;
+      // gap: 100px;
+    }
+
+    // img{
+    //     width: 83%;
+    // }
+  }
+}

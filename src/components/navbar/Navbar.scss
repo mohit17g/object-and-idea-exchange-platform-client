@@ -1,0 +1,44 @@
+.Navbar {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    height: 60px;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1;
+
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .left-side{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .right-side {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        .logout {
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2px 3px;
+        }
+
+        .logout:hover{
+            color: red;
+        }
+    }
+}

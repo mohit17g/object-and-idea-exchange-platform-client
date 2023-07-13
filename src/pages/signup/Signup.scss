@@ -1,0 +1,76 @@
+.Signup {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  // position: relative;
+  background-color: rgba(127, 255, 212, 0.063);
+
+  .heading {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  label,
+  input {
+    display: block;
+    width: 100%;
+    margin-block: 5px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid teal;
+  }
+
+  .submit {
+    margin-top: 16px;
+  }
+
+  .subheading {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .input-group-btn{
+      position: absolute;
+      left: 93%;
+      color: teal;
+      font-size: 25px;
+    }
+  }
+
+  .Logo {
+
+    animation: bubble-fade 3s infinite backwards alternate-reverse;
+    img {
+      width: 300px;
+      // position: absolute;
+      // top: 10px;
+      // left: 10px;
+
+    }
+  }
+
+  @keyframes bubble-fade {
+    0% {
+      transform: scale(0.4) translateY(0);
+    }
+    100% {
+      background-color: transparent;
+      transform: scale(1) translateY(-1px);
+    }
+  }
+}
