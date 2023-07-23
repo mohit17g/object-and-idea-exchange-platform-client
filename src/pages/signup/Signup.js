@@ -121,6 +121,7 @@ function Signup() {
           <div className="row">
             <input
               type={passwordType}
+              
               // onChange={handlePasswordChange}
               className="password"
               // value={passwordInput}

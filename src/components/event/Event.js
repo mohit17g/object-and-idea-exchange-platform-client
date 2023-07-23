@@ -34,7 +34,7 @@ function Event() {
     <div className="Buyandsell">
       <div className="img">{<img src={userImg} alt="showcase" />}</div>
       <div className="container">
-        <div className="left-part1">
+        <div className="left-part1 break">
           {feedData?.posts?.map((post) => (
             <Post key={post._id} post={post} />
           ))}

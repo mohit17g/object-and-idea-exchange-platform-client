@@ -9,9 +9,9 @@
 // export default Admin
 
 import React, { useEffect } from "react";
-import { getFeedData } from "../../redux/slices/feedSlice";
+import { getAllUsers } from "../../redux/slices/feedSlice";
 import { useSelector, useDispatch } from "react-redux";
-import Post from "../../components/post/Post";
+import Post from "../../components/post/Postadmin";
 import Buyandsel from "../../components/buyandsell/Buyandsel";
 import "./Admin.scss";
 import Follower from "../../components/follower/Follower";
@@ -51,7 +51,7 @@ function Admin() {
   const feedData = useSelector((state) => state.feedDataReducer.feedData);
 
   useEffect(() => {
-    dispatch(getFeedData());
+    dispatch(getAllUsers());
   }, [dispatch]);
 
   // return (
@@ -114,7 +114,7 @@ function Admin() {
               background: colorBgContainer,
             }}
           >
-            <Sider
+            {/* <Sider
               style={{
                 background: colorBgContainer,
               }}
@@ -134,11 +134,11 @@ function Admin() {
                   <FaUserAlt className="col"/>
                   <h3>All Users</h3>
                 </div>
-                {feedData?.posts?.map((post) => (
+                {feedData?.allUser?.map((post) => (
                   <Post key={post._id} post={post} />
                 ))}
               </div>
-            </Sider>
+            </Sider> */}
             <Content
               style={{
                 padding: "0 24px",
@@ -146,7 +146,11 @@ function Admin() {
               }}
             >
               <div className="right-part1">
-                {feedData?.posts?.map((post) => (
+              <div className="iconss">
+                  <FaUserAlt className="col"/>
+                  <h3>All Users</h3>
+                </div>
+                {feedData?.allUser?.map((post) => (
                   <Post key={post._id} post={post} />
                 ))}
               </div>
@@ -158,7 +162,7 @@ function Admin() {
             textAlign: "center",
           }}
         >
-          Ant Design ©2023 Created by Ant UED
+          {/* Ant Design ©2023 Created by Ant UED */}
         </Footer>
       </Layout>
     </div>

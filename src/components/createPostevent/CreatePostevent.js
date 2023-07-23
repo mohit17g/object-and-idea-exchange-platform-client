@@ -78,6 +78,7 @@ function CreatePostevent() {
         <input
           value={caption}
           type="text"
+          // target="_blank"
           className="captionInput"
           placeholder="Registration Link..."
           onChange={(e) => setCaption(e.target.value)}

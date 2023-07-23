@@ -11,7 +11,7 @@ import { FaRupeeSign } from "react-icons/fa";
 import { TOAST_SUCCESS } from "../../App";
 import { showToast } from "../../redux/slices/appConfigSlice";
 
-function Postevent({ post }) {
+function Postadmin({ post }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const params = useParams();
@@ -46,14 +46,42 @@ function Postevent({ post }) {
     <div className="Post Postevent">
       <div
         className="heading"
-        onClick={() => navigate(`/profile2/${post.owner._id}`)}
+        // onClick={() => navigate(`/profile2/${post._id}`)}
       >
-        <Avatar src={post.owner?.avatar?.url} />
-        <h4>{post.owner?.name}</h4>
+        <Avatar src={post?.avatar?.url} />
+        <h2>{post?.name}</h2>
       </div>
-      <div className="content">
+      <div
+        className="heading btn-primary"
+        style={{ display: "inline-block", marginLeft: "10px" }}
+        onClick={() => navigate(`/profile/${post._id}`)}
+      >
+        All Posts
+      </div>
+      <div
+        className="heading btn-primary"
+        style={{ display: "inline-block", marginLeft: "10px" }}
+        onClick={() => navigate(`/profile1/${post._id}`)}
+      >
+        All Advertisments
+      </div>{" "}
+      <div
+        className="heading btn-primary"
+        style={{ display: "inline-block", marginLeft: "10px" }}
+        onClick={() => navigate(`/profile2/${post._id}`)}
+      >
+        All Events
+      </div>{" "}
+      <div
+        className="heading btn-primary"
+        style={{ display: "inline-block", marginLeft: "10px" }}
+        onClick={() => navigate(`/profile3/${post._id}`)}
+      >
+        All Recruitment
+      </div>
+      {/* <div className="content">
         <img src={post?.image?.url} alt="" />
-      </div>
+      </div> */}
       <div className="footer">
         {/* <div className="like" onClick={handlePostLiked}>
           {post.isLiked ? (
@@ -69,17 +97,19 @@ function Postevent({ post }) {
           {post.price}
         </h3>
         <h4 className="phoneno">Phone No📞➡&nbsp;&nbsp; +91 {post.phoneno}</h4> */}
-        <a href={post.caption} target="_blank"><p className="caption">{post.caption}</p></a>
+        {/* <a href={post.caption} target="_blank">
+          <p className="caption">{post.caption}</p>
+        </a>
         <p className="caption1">{post.caption1}</p>
         <h4 className="date">Event Date📅 &nbsp;&nbsp; {post.date}</h4>
         <h4 className="time">Event Time🕣 &nbsp;&nbsp; {post.time}</h4>
         <h6 className="time-ago">{post?.timeAgo}</h6>
         <div className="like likes" onClick={handleDeletePost}>
           {<AiFillDelete style={{ color: "teal" }} />}
-        </div>
+        </div> */}
       </div>
     </div>
   );
 }
 
-export default Postevent;
+export default Postadmin;

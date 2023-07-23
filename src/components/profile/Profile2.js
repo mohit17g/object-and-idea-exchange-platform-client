@@ -27,7 +27,7 @@ function Profile2() {
   return (
     <div className="Profile">
       <div className="container">
-        <div className="left-part1">
+        <div className="left-part1 break">
           {/* {isMyProfile && <CreatePostproduct />} */}
           {userProfile?.posts?.map((post) => (
             <Post key={post._id} post={post} />

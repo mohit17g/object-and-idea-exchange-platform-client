@@ -102,6 +102,16 @@ function Profile() {
                 Your All Advertisments
               </button>
             )}
+            {/* {myProfile?._id === "649982ea04591d8e68ab54de"  && userProfile?.email != "mohit17g.one@gmail.com" && (
+              <button
+                className="update-profile btn-primary"
+                onClick={() => {
+                  navigate(`/admin/${myProfile?._id}`);
+                }}
+              >
+                Delete Account
+              </button>
+            )} */}
           </div>
         </div>
       </div>
